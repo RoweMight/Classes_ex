@@ -1,0 +1,35 @@
+class Player
+
+    def initialize (name,health=100)
+    @name = name.capitalize
+    @health= health
+    end
+    
+        def wOOt
+            @health +=10
+        
+        puts "{@name} got wOOted!"
+        end
+        
+        def blam
+            @health -=10
+        
+        puts "#{@name} got blammmed!"
+        end
+
+    def to_s
+        "I'm #{@name} with a health of #{@health}."
+    end
+
+end
+
+player1= Player.new("moe")
+puts player1
+
+player2 = Player.new("larry",80)
+player2.blam
+puts player2
+
+player3 = Player.new("curly", 125)
+player3.wOOt
+puts player3
